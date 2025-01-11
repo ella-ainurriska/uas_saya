@@ -7,4 +7,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('layouts.pages.products.index');
 // });
 
-Route::get('/',[ProductController::class, 'index']);
+Route::get('/products',[ProductController::class, 'index']);

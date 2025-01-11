@@ -1,3 +1,19 @@
+
+@php #menu2 sidebar
+    $menus = [
+      (object) [
+        "title" => "Dashboard",
+        "path" => "/",
+        "icon" => "fas fa-th",
+      ],
+      (object) [
+        "title" => "Produk",
+        "path" => "products",
+        "icon" => "fas fa-th",
+      ],
+    ]
+@endphp
+
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../index3.html" class="brand-link">
@@ -34,15 +50,19 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+        @foreach ($menus as $menu)
           <li class="nav-item">
-            <a href="widgets.html" class="nav-link active">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="{{ $menu->path[0] !== '/' ? '/' . $menu->path : $menu->path}}" class="nav-link {{ request()->path() === $menu->path ? 'acvtive' : ' ' }}">
+              <i class="nav-icon {{ $menu->icon }}"></i>
               <p>
-                Dashboard
+                {{ $menu->title }}
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
           </li>
+        @endforeach
+         
+         
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
