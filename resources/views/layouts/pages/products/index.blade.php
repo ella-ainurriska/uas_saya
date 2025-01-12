@@ -32,15 +32,17 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                <td>no</td>
-                <td>Produk</td>
-                <td>Description</td>
-                <td>Kode Barang</td>
-                <td>Harga</td>
-                <td>Stok</td>
-                <td>Katagori</td>
-                </tr>
+               @foreach ($products as $product )
+               <tr>
+                <td>{{ $loop->iteration }}</td> //membuat looping
+                <td>{{ $product->name }}</td>
+                <td>{{ $product->description }}</td>
+                <td>{{ $product->SKU }}</td>
+                <td>{{ $product->price }}</td>
+                <td>{{ $product->Stok }}</td>
+                <td>{{ $product->category->name }}</td>
+              </tr>  
+               @endforeach
               </tbody>
             </table>
           </div>
