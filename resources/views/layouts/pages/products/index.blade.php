@@ -18,6 +18,11 @@
     <div class="row">
       <div class="col">
         <div class="card">
+          <div class="card-header d-flex justify-content-end">
+            <a href="/products/create" class="btn btn-sm btn-primary">
+              Tambah barang
+            </a>
+          </div>
           <div class="card-body">
             <table class="table table-bordered">
               <thead>
@@ -34,7 +39,7 @@
               <tbody>
                @foreach ($products as $product )
                <tr>
-                <td>{{ $loop->iteration }}</td> //membuat looping
+                <td>{{ $loop->iteration }}</td>  
                 <td>{{ $product->name }}</td>
                 <td>{{ $product->description }}</td>
                 <td>{{ $product->SKU }}</td>
