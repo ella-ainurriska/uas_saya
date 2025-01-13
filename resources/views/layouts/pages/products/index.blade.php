@@ -32,7 +32,7 @@
                   <th>Description</th>
                   <th>Kode Barang</th>
                   <th>Harga</th>
-                  <th>Stok</th>
+                  <th>Stock</th>
                   <th>Katagori</th>
                 </tr>
               </thead>
@@ -44,7 +44,7 @@
                 <td>{{ $product->description }}</td>
                 <td>{{ $product->SKU }}</td>
                 <td>{{ $product->price }}</td>
-                <td>{{ $product->Stok }}</td>
+                <td>{{ $product->Stock }}</td>
                 <td>{{ $product->category->name }}</td>
               </tr>  
                @endforeach

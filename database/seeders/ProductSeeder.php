@@ -18,7 +18,7 @@ class ProductSeeder extends Seeder
             "description" => "Deskripsi Produk",
             "SKU" => "12345-ok",
             "price" => 10000,
-            "Stok" => 100,
+            "Stock" => 100,
             "category_id" => 1,
         ]);
     }
