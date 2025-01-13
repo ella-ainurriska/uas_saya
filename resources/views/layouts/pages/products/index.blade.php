@@ -20,7 +20,7 @@
         <div class="card">
           <div class="card-header d-flex justify-content-end">
             <a href="/products/create" class="btn btn-sm btn-primary">
-              Tambah barang
+              Tambah produk
             </a>
           </div>
           <div class="card-body">
